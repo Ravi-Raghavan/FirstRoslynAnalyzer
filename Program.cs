@@ -172,11 +172,18 @@ namespace ProgramAnalyzer
                 else if(memberType == SyntaxKind.FieldDeclaration)
                 {
                     FieldDeclarationSyntax fds = (FieldDeclarationSyntax)(mds);
-                    SymbolInfo symbolInfo = model.GetSymbolInfo(fds);
-                    IFieldSymbol fieldSymbol = (IFieldSymbol)symbolInfo.Symbol;
-                    if(fieldSymbol == null) { continue; }
-                    Console.WriteLine($"Field found in class {parameter.Identifier}");
-                    Console.WriteLine($"Value of this Field is: {fieldSymbol.ConstantValue}");
+                    foreach(var variable in fds.Declaration.Variables)
+                    {
+                        var fieldSymbol = (IFieldSymbol)model.GetDeclaredSymbol(variable);
+                        if(fieldSymbol == null) { continue; }
+                        Console.WriteLine($"Field found in class {parameter.Identifier}");
+                        Console.WriteLine($"Value of this Field is: {fieldSymbol.ConstantValue}");
+                    }
+                    //SymbolInfo symbolInfo = model.GetSymbolInfo(fds);
+                    //IFieldSymbol fieldSymbol = (IFieldSymbol)symbolInfo.Symbol;
+                    //if (fieldSymbol == null) { continue; }
+                    //Console.WriteLine($"Field found in class {parameter.Identifier}");
+                    //Console.WriteLine($"Value of this Field is: {fieldSymbol.ConstantValue}");
                 }
 
             }

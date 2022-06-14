@@ -1,8 +1,3 @@
-/Users/raviraghavan/Projects/MongoDB_Analyzer/ProgramAnalyzer/obj/Debug/netcoreapp3.1/ProgramAnalyzer.csproj.AssemblyReference.cache
-/Users/raviraghavan/Projects/MongoDB_Analyzer/ProgramAnalyzer/obj/Debug/netcoreapp3.1/ProgramAnalyzer.GeneratedMSBuildEditorConfig.editorconfig
-/Users/raviraghavan/Projects/MongoDB_Analyzer/ProgramAnalyzer/obj/Debug/netcoreapp3.1/ProgramAnalyzer.AssemblyInfoInputs.cache
-/Users/raviraghavan/Projects/MongoDB_Analyzer/ProgramAnalyzer/obj/Debug/netcoreapp3.1/ProgramAnalyzer.AssemblyInfo.cs
-/Users/raviraghavan/Projects/MongoDB_Analyzer/ProgramAnalyzer/obj/Debug/netcoreapp3.1/ProgramAnalyzer.csproj.CoreCompileInputs.cache
 /Users/raviraghavan/Projects/MongoDB_Analyzer/ProgramAnalyzer/bin/Debug/netcoreapp3.1/libzstd.dll
 /Users/raviraghavan/Projects/MongoDB_Analyzer/ProgramAnalyzer/bin/Debug/netcoreapp3.1/snappy32.dll
 /Users/raviraghavan/Projects/MongoDB_Analyzer/ProgramAnalyzer/bin/Debug/netcoreapp3.1/snappy64.dll
@@ -136,6 +131,11 @@
 /Users/raviraghavan/Projects/MongoDB_Analyzer/ProgramAnalyzer/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll
 /Users/raviraghavan/Projects/MongoDB_Analyzer/ProgramAnalyzer/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll
 /Users/raviraghavan/Projects/MongoDB_Analyzer/ProgramAnalyzer/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp3.1/System.Text.Encoding.CodePages.dll
+/Users/raviraghavan/Projects/MongoDB_Analyzer/ProgramAnalyzer/obj/Debug/netcoreapp3.1/ProgramAnalyzer.csproj.AssemblyReference.cache
+/Users/raviraghavan/Projects/MongoDB_Analyzer/ProgramAnalyzer/obj/Debug/netcoreapp3.1/ProgramAnalyzer.GeneratedMSBuildEditorConfig.editorconfig
+/Users/raviraghavan/Projects/MongoDB_Analyzer/ProgramAnalyzer/obj/Debug/netcoreapp3.1/ProgramAnalyzer.AssemblyInfoInputs.cache
+/Users/raviraghavan/Projects/MongoDB_Analyzer/ProgramAnalyzer/obj/Debug/netcoreapp3.1/ProgramAnalyzer.AssemblyInfo.cs
+/Users/raviraghavan/Projects/MongoDB_Analyzer/ProgramAnalyzer/obj/Debug/netcoreapp3.1/ProgramAnalyzer.csproj.CoreCompileInputs.cache
 /Users/raviraghavan/Projects/MongoDB_Analyzer/ProgramAnalyzer/obj/Debug/netcoreapp3.1/ProgramAnalyzer.csproj.CopyComplete
 /Users/raviraghavan/Projects/MongoDB_Analyzer/ProgramAnalyzer/obj/Debug/netcoreapp3.1/ProgramAnalyzer.dll
 /Users/raviraghavan/Projects/MongoDB_Analyzer/ProgramAnalyzer/obj/Debug/netcoreapp3.1/ProgramAnalyzer.pdb
