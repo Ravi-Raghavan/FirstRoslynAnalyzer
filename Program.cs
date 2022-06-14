@@ -176,8 +176,11 @@ namespace ProgramAnalyzer
                     {
                         var fieldSymbol = (IFieldSymbol)model.GetDeclaredSymbol(variable);
                         if(fieldSymbol == null) { continue; }
-                        Console.WriteLine($"Field found in class {parameter.Identifier}");
-                        Console.WriteLine($"Value of this Field is: {fieldSymbol.ConstantValue}");
+                        Console.WriteLine($"There is a field with name {fieldSymbol.Name} found in class {parameter.Identifier}");
+                        if (fieldSymbol.IsConst)
+                        {
+                            Console.WriteLine($"Value of this Field is: {fieldSymbol.ConstantValue}");
+                        }
                     }
                     //SymbolInfo symbolInfo = model.GetSymbolInfo(fds);
                     //IFieldSymbol fieldSymbol = (IFieldSymbol)symbolInfo.Symbol;

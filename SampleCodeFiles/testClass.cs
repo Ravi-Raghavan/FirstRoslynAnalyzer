@@ -5,6 +5,7 @@ namespace MongoDB_Analyzer
     public class testClass
     {
         private const int instanceVariableOne = 10;
+        private int instanceVaribleTwo;
         public testClass()
         {
         }

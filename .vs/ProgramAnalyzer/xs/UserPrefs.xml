@@ -1,11 +1,17 @@
 ﻿<Properties StartupConfiguration="{C539C011-3A54-42B1-85C3-05D73E35266B}|Default">
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+    <Files>
+      <File FileName="Program.cs" Line="32" Column="1" />
+      <File FileName="SampleCodeFiles/testClass.cs" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ProgramAnalyzer" expanded="True" selected="True">
-            <Node name="ProgramAnalyzer" expanded="True" />
+          <Node name="ProgramAnalyzer" expanded="True">
+            <Node name="ProgramAnalyzer" expanded="True" selected="True">
+              <Node name="SampleCodeFiles" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
@@ -16,6 +22,8 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.ProgramAnalyzer PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
