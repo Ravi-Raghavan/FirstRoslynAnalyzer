@@ -26,25 +26,47 @@ namespace ProgramAnalyzer
         {
             Console.WriteLine("Hello World!");
             String fileName = prefix + "/testClass.cs";
-            analyzePrograms(fileName, true);
+            //analyzePrograms(fileName, true);
             //analyzeTextCode(text);
 
             MongoClient mongoClient = new MongoClient("mongodb+srv://mflixAppUser:mflixAppPwd@sandbox.wbado.mongodb.net/?retryWrites=true&w=majority&maxPoolSize=50&wtimeoutMS=2500");
 
             IMongoDatabase database = mongoClient.GetDatabase("sample_mflix");
-            IMongoCollection<BsonDocument> zips = database.GetCollection<BsonDocument>("movies");
+            IMongoCollection<BsonDocument> movies_collection = database.GetCollection<BsonDocument>("movies");
 
 
-            //Builders Query
+            //Builders Queries
+
+            //Query #1
             var finder = Builders<BsonDocument>.Filter.Where(x => x["year"] < 1920);
-            var reviews = zips.Find<BsonDocument>(finder).ToList();
+            var reviews = movies_collection.Find<BsonDocument>(finder).ToList();
             foreach(var review in reviews)
             {
-                Console.WriteLine("Review: " + review);
+                //Console.WriteLine("Review: " + review);
             }
 
 
-            //LINQ Query
+            var secondQuery = Builders<BsonDocument>.Filter.Eq(x => x["type"], "movie");
+            var projection = Builders<BsonDocument>.Projection.Include(m => m["year"]);
+
+
+            var resultFromQuery = movies_collection.Find(secondQuery).Project(projection);
+
+
+            //Aggregation Pipeline
+            var output = movies_collection.Aggregate()
+                          .Match(m => m["type"] == "movie")
+                          .Group(x => x["year"], g => new { Result = g.Select(x => x["year"]).Count() });
+
+
+            //Console.WriteLine(output);
+
+            //LINQ Queries
+            //var query = movies_collection.AsQueryable()
+            //.Select(p => new { p["type"], p["year"] });
+
+
+            analyzeTextCode(text);
 
 
         }
@@ -301,13 +323,16 @@ namespace ProgramAnalyzer
                 }
                 Console.WriteLine("-------");
             }
-            Console.WriteLine("===========Other Variable Assignments ===========");
-            foreach (var variableAssignment in assignments)
+            if(assignments.Count() > 0)
             {
-                //AssignmentExpressionSyntax assignment = variableAssignment;
-                Console.WriteLine($"{variableAssignment.Left} is set equal to {variableAssignment.Right}");
+                Console.WriteLine("===========Other Variable Assignments ===========");
+                foreach (var variableAssignment in assignments)
+                {
+                    //AssignmentExpressionSyntax assignment = variableAssignment;
+                    Console.WriteLine($"{variableAssignment.Left} is set equal to {variableAssignment.Right}");
+                }
+                Console.WriteLine("---------------------------------------------");
             }
-            Console.WriteLine("---------------------------------------------");
         }
     }
 }
