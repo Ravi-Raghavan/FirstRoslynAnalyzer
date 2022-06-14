@@ -74,6 +74,7 @@
     <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.analyzers/3.3.3/build/Microsoft.CodeAnalysis.Analyzers.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.analyzers/3.3.3/build/Microsoft.CodeAnalysis.Analyzers.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMongoDB_Analyzer Condition=" '$(PkgMongoDB_Analyzer)' == '' ">/Users/raviraghavan/.nuget/packages/mongodb.analyzer/1.0.0</PkgMongoDB_Analyzer>
     <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">/Users/raviraghavan/.nuget/packages/microsoft.codeanalysis.analyzers/3.3.3</PkgMicrosoft_CodeAnalysis_Analyzers>
   </PropertyGroup>
 </Project>

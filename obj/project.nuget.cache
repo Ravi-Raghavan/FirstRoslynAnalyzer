@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1WzGw/8xLn3G0sDDzkkW5ir0t5IGdi9ukc1M3IeCkSn/nJekfMmXYP0rGFr9zZeYwOJi4Y1j1J4LxC5CO+QTCQ==",
+  "dgSpecHash": "TJEsz7FcA1x8vkpycmqB1GNqbGzCTRpteO5c3c+sn7S5m/s5j8VVPtvj2cBxWJUVlSue0anbowdGtM4rI/BG2g==",
   "success": true,
   "projectFilePath": "/Users/raviraghavan/Projects/MongoDB_Analyzer/ProgramAnalyzer/ProgramAnalyzer.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,7 @@
     "/Users/raviraghavan/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "/Users/raviraghavan/.nuget/packages/microsoft.win32.primitives/4.3.0/microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "/Users/raviraghavan/.nuget/packages/microsoft.win32.registry/5.0.0/microsoft.win32.registry.5.0.0.nupkg.sha512",
+    "/Users/raviraghavan/.nuget/packages/mongodb.analyzer/1.0.0/mongodb.analyzer.1.0.0.nupkg.sha512",
     "/Users/raviraghavan/.nuget/packages/mongodb.bson/2.16.0/mongodb.bson.2.16.0.nupkg.sha512",
     "/Users/raviraghavan/.nuget/packages/mongodb.driver/2.16.0/mongodb.driver.2.16.0.nupkg.sha512",
     "/Users/raviraghavan/.nuget/packages/mongodb.driver.core/2.16.0/mongodb.driver.core.2.16.0.nupkg.sha512",

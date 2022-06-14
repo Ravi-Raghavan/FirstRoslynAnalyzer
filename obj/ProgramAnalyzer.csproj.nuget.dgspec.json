@@ -56,6 +56,10 @@
               "target": "Package",
               "version": "[4.2.0, )"
             },
+            "MongoDB.Analyzer": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "MongoDB.Bson": {
               "target": "Package",
               "version": "[2.16.0, )"

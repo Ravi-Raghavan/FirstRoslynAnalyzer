@@ -12,6 +12,7 @@
           "Microsoft.CodeAnalysis.Analyzers": "3.3.3",
           "Microsoft.CodeAnalysis.CSharp": "4.2.0",
           "Microsoft.CodeAnalysis.Common": "4.2.0",
+          "MongoDB.Analyzer": "1.0.0",
           "MongoDB.Bson": "2.16.0",
           "MongoDB.Driver": "2.16.0",
           "MongoDB.Driver.Core": "2.16.0"
@@ -413,6 +414,7 @@
           }
         }
       },
+      "MongoDB.Analyzer/1.0.0": {},
       "MongoDB.Bson/2.16.0": {
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
@@ -1434,6 +1436,13 @@
       "sha512": "sha512-dDoKi0PnDz31yAyETfRntsLArTlVAVzUzCIvvEDsDsucrl33Dl8pIJG06ePTJTI3tGpeyHS9Cq7Foc/s4EeKcg==",
       "path": "microsoft.win32.registry/5.0.0",
       "hashPath": "microsoft.win32.registry.5.0.0.nupkg.sha512"
+    },
+    "MongoDB.Analyzer/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dS1ODgAu891Aiw+AWAZlSCHs/Q9M10vv+yqCSeQ6Di9UU/fykXHt0sgeMb1GwolCqgH5xHwfpzL8yUFavFKvvw==",
+      "path": "mongodb.analyzer/1.0.0",
+      "hashPath": "mongodb.analyzer.1.0.0.nupkg.sha512"
     },
     "MongoDB.Bson/2.16.0": {
       "type": "package",

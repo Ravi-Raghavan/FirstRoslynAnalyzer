@@ -28,6 +28,25 @@ namespace ProgramAnalyzer
             String fileName = prefix + "/testClass.cs";
             analyzePrograms(fileName, true);
             //analyzeTextCode(text);
+
+            MongoClient mongoClient = new MongoClient("mongodb+srv://mflixAppUser:mflixAppPwd@sandbox.wbado.mongodb.net/?retryWrites=true&w=majority&maxPoolSize=50&wtimeoutMS=2500");
+
+            IMongoDatabase database = mongoClient.GetDatabase("sample_mflix");
+            IMongoCollection<BsonDocument> zips = database.GetCollection<BsonDocument>("movies");
+
+
+            //Builders Query
+            var finder = Builders<BsonDocument>.Filter.Where(x => x["year"] < 1920);
+            var reviews = zips.Find<BsonDocument>(finder).ToList();
+            foreach(var review in reviews)
+            {
+                Console.WriteLine("Review: " + review);
+            }
+
+
+            //LINQ Query
+
+
         }
 
         static void analyzePrograms(String fileName, bool file)
@@ -111,6 +130,7 @@ namespace ProgramAnalyzer
                     //{
                     //    Console.WriteLine("ERROR");
                     //}
+                    analyzeTextCode(testScript);
                 }
                 else
                 {
