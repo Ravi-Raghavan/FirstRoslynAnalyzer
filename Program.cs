@@ -19,12 +19,14 @@ namespace ProgramAnalyzer
 {
     var x = 1;
     var y = x + 123; 
-    var z = y + 132; 
+    var z = y + 132;
+    var w = 2, p = 123;
+    
     }";
         private static string prefix = "/Users/raviraghavan/Projects/MongoDB_Analyzer/ProgramAnalyzer/SampleCodeFiles";
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Console.WriteLine("Hello World!");
             String fileName = prefix + "/testClass.cs";
             //analyzePrograms(fileName, true);
             //analyzeTextCode(text);
@@ -299,7 +301,8 @@ namespace ProgramAnalyzer
 
             SemanticModel model = compilation.GetSemanticModel(AST);
 
-            Console.WriteLine("============Variable Declarations==========");
+            Dictionary<string, string> map = new Dictionary<string, string>();
+            //Console.WriteLine("============Variable Declarations==========");
             foreach (VariableDeclarationSyntax variableDeclaration in variableDeclarations)
             {
                 VariableDeclarationSyntax declaration = variableDeclaration;
@@ -318,12 +321,21 @@ namespace ProgramAnalyzer
                     IEnumerable<AssignmentExpressionSyntax> nestedAssignments = nestedDescendantNodes.OfType<AssignmentExpressionSyntax>();
                     foreach (var nestedAssignment in nestedAssignments)
                     {
-                        Console.WriteLine($"{nestedAssignment.Left} is set equal to {nestedAssignment.Right}");
+                        map[nestedAssignment.Left.ToString()] = nestedAssignment.Right.ToString();
+
+                        //Console.WriteLine($"{nestedAssignment.Left} is set equal to {nestedAssignment.Right}");
                     }
                 }
-                Console.WriteLine("-------");
+                //Console.WriteLine("-------");
             }
-            if(assignments.Count() > 0)
+            //Assignment Printouts
+            foreach (KeyValuePair<string, string> entry in map)
+            {
+                // do something with entry.Value or entry.Key
+                Console.WriteLine($"{entry.Key} : {entry.Value}");
+            }
+
+            if (assignments.Count() > 0)
             {
                 Console.WriteLine("===========Other Variable Assignments ===========");
                 foreach (var variableAssignment in assignments)
